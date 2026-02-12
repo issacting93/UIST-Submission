@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* BLOOM Design System Variables */
+        --bloom-bg: #ffffff;
+        --bloom-bg-subtle: #f8f8f8;
+        --bloom-black: #1a1a1a;
+        --bloom-gray: #e5e5e5;
+        --bloom-gray-dark: #999999;
+        --bloom-yellow: #f5c542;
+        --bloom-orange: #e85a3c;
+        --bloom-green: #22c55e;
+        --bloom-purple: #8b5cf6;
+        --bloom-text: #1a1a1a;
+        --bloom-text-dim: #888888;
+    }
+}
+
+@layer components {
+
+    /* Context Pills - Draggable vocabulary items */
+    .bloom-pill {
+        @apply inline-flex items-center gap-2 px-[18px] py-[10px] font-medium cursor-pointer select-none;
+        border-radius: 24px;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 500;
+        transition: all 200ms ease;
+    }
+
+    /* Variant Colors */
+    .bloom-pill-yellow {
+        @apply bg-bloom-yellow text-bloom-black border border-transparent hover:border-bloom-black;
+    }
+
+    .bloom-pill-orange {
+        @apply bg-bloom-orange text-white border border-transparent hover:border-bloom-black;
+    }
+
+    .bloom-pill-black {
+        @apply bg-bloom-black text-white hover:bg-gray-800;
+    }
+
+    .bloom-pill-outline {
+        @apply bg-transparent border border-bloom-gray text-bloom-text hover:border-bloom-black;
+    }
+
+    .bloom-node {
+        @apply flex flex-col items-center justify-center w-20 h-20 rounded-full bg-white shadow-bloom-sm border border-bloom-gray transition-all duration-300 ease-out;
+    }
+
+    .bloom-node-active {
+        @apply scale-110 shadow-bloom-md border-bloom-yellow;
+    }
+
+    .bloom-section-label {
+        @apply text-[11px] font-bold uppercase tracking-widest text-bloom-dim;
+    }
+}
